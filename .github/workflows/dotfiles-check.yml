@@ -1,0 +1,21 @@
+name: "Dotfiles Lint & Check"
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Chezmoi
+        run: sh -c "$(curl -fsLS get.chezmoi.io)"
+
+      - name: Test Syntax (Dry Run)
+        run: |
+          ./bin/chezmoi init
+          ./bin/chezmoi apply --dry-run --verbose
+
+      - name: ShellCheck (Valida seus scripts)
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: "./run_once_install-packages.sh.tmpl"
