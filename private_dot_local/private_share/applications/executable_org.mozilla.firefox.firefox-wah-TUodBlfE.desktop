@@ -1,0 +1,18 @@
+[Desktop Entry]
+Categories=Network
+Exec=firefox --class=wah-TUodBlfE --name=wah-TUodBlfE --profile=/home/alan/.var/app/org.pvermeer.WebAppHub/data/web-app-hub/profiles/firefox/TUodBlfE --no-remote https://web.whatsapp.com/
+Icon=/home/alan/.var/app/org.pvermeer.WebAppHub/data/web-app-hub/icons/TUodBlfE.png
+Name=Whatsapp
+StartupWMClass=wah-TUodBlfE
+Terminal=false
+Type=Application
+Version=1.0
+X-MultipleArgs=false
+X-WAH=true
+X-WAH-BROWSER-ID=firefox_firefox
+X-WAH-ID=TUodBlfE
+X-WAH-ISOLATE=true
+X-WAH-MAXIMIZE=false
+X-WAH-PROFILE=/home/alan/.var/app/org.pvermeer.WebAppHub/data/web-app-hub/profiles/firefox/TUodBlfE
+X-WAH-URL=https://web.whatsapp.com/
+X-WAH-VERSION=0.9.4
