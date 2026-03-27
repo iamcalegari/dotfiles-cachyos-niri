@@ -1,0 +1,28 @@
+{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ────────────── Input Configuration ──────────────
+{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} https{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }}github.com{{ .chezmoi.pathSeparator }}YaLTeR{{ .chezmoi.pathSeparator }}niri{{ .chezmoi.pathSeparator }}wiki{{ .chezmoi.pathSeparator }}Configuration{{ .chezmoi.pathListSeparator }}-Input
+
+input {
+    keyboard {
+        xkb {
+            {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }}If you want to overwrite your keyboard layout,
+            {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} uncomment the line below and change the layout accordingly.
+            {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }}layout "us" {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Use the American keyboard layout
+        }
+        numlock {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Enable numlock on startup
+    }
+
+    touchpad {
+        tap {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Enable tap-to-click
+        natural-scroll {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Enable natural (macOS-style) scrolling
+    }
+
+    mouse {
+        {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} If you want to disable Mouse Acceleration,
+        {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} uncomment the lines below.
+        {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }}accel-profile "flat"
+        {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }}accel-speed 0.0
+    }
+
+    focus-follows-mouse {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Automatically focus windows under the mouse pointer
+    workspace-{{ .chezmoi.config.color }}-back-and-forth {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Enable workspace back & forth switching
+}

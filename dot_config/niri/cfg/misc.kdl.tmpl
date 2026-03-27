@@ -1,8 +1,8 @@
     prefer-no-csd
-    screenshot-path "/home/alan/Pictures/Screenshots"
+    screenshot-path "{{ .chezmoi.homeDir }}{{ .chezmoi.pathSeparator }}Pictures{{ .chezmoi.pathSeparator }}Screenshots"
 
     environment {
-        ELECTRON_OZONE_PLATFORM_HINT "auto"
+        ELECTRON_OZONE_PLATFORM_HINT "{{ .chezmoi.config.color }}"
         QT_QPA_PLATFORM "wayland"
         QT_QPA_PLATFORMTHEME "gtk3"
         QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
@@ -15,7 +15,7 @@
     }
 
     debug {
-        // Allows notification actions and window activation from Noctalia.
+        {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Allows notification actions and window activation from Noctalia.
         honor-xdg-activation-with-invalid-serial
     }
 

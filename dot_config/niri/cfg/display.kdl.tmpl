@@ -1,0 +1,39 @@
+{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ────────────── Output Configuration ──────────────
+{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} You can run `niri msg outputs` to get the correct name for your displays.
+{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} You will have to remove "{{ .chezmoi.pathSeparator }}-" and edit it before it takes effect.
+{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} https{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }}github.com{{ .chezmoi.pathSeparator }}YaLTeR{{ .chezmoi.pathSeparator }}niri{{ .chezmoi.pathSeparator }}wiki{{ .chezmoi.pathSeparator }}Configuration{{ .chezmoi.pathListSeparator }}-Outputs
+
+{{ .chezmoi.pathSeparator }}- output "DP-1" {
+    mode "2560x1440@120" {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Set resolution and refresh rate
+    scale 1 {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} No scaling (use 2 for HiDPI)
+}
+
+output "HDMI-A-1" {
+	mode "1920x1080@60.000"
+	scale 1
+	position x=1536 y=0
+	transform "normal"
+	focus-at-startup
+}
+
+output "eDP-1" {
+	mode "1920x1080@120.003"
+	scale 1
+	position x=0 y=0
+	transform "normal"
+	focus-at-startup
+	variable-refresh-rate
+}
+
+output "LG Electronics LG FULL HD 0x01010101" {
+	mode "1920x1080@60.000"
+	scale 1
+	position x=0 y=0
+	transform "normal"
+	focus-at-startup
+}
+
+debug {
+    keep-laptop-panel-on-when-lid-is-closed false
+}
+

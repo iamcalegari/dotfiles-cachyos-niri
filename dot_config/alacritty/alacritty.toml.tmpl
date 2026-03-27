@@ -5,7 +5,7 @@ WINIT_X11_SCALE_FACTOR = "1"
 [window]
 dynamic_padding = true
 decorations = "full"
-title = "Alacritty@CachyOS"
+title = "Alacritty@{{ .chezmoi.osRelease.prettyName }}"
 opacity = 0.8
 decorations_theme_variant = "Dark"
 
@@ -68,7 +68,7 @@ family = "monospace"
 style = "Bold Italic"
 
 [selection]
-semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+semantic_escape_chars = ",│`|{{ .chezmoi.pathListSeparator }}\"' ()[]{}<>\t"
 save_to_clipboard = true
 
 [cursor]
@@ -160,6 +160,6 @@ mods = "Control"
 action = "ResetFontSize"
 
 [general]
-import = ["~/.config/alacritty/themes/noctalia.toml"]
+import = ["~{{ .chezmoi.pathSeparator }}.config{{ .chezmoi.pathSeparator }}alacritty{{ .chezmoi.pathSeparator }}themes{{ .chezmoi.pathSeparator }}noctalia.toml"]
 live_config_reload = true
 working_directory = "None"

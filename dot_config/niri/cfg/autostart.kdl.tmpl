@@ -1,0 +1,8 @@
+{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ────────────── Startup Applications ──────────────
+{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} https{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }}github.com{{ .chezmoi.pathSeparator }}YaLTeR{{ .chezmoi.pathSeparator }}niri{{ .chezmoi.pathSeparator }}wiki{{ .chezmoi.pathSeparator }}Configuration{{ .chezmoi.pathListSeparator }}-Miscellaneous#spawn-sh-at-startup
+
+    spawn-sh-at-startup "qs -c noctalia-shell"
+
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Runs kanshi for different screen profiles  
+    spawn-sh-at-startup "kanshi &"
+	

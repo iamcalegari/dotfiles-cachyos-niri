@@ -1,25 +1,25 @@
 binds {
 
-    // ────────────── Keybindings ──────────────
-    // https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ────────────── Keybindings ──────────────
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} https{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }}github.com{{ .chezmoi.pathSeparator }}YaLTeR{{ .chezmoi.pathSeparator }}niri{{ .chezmoi.pathSeparator }}wiki{{ .chezmoi.pathSeparator }}Configuration{{ .chezmoi.pathListSeparator }}-Key-Bindings
 
-    // ─── noctalia-shell keybinds ───
-    // https://docs.noctalia.dev/getting-started/keybinds/
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── noctalia-shell keybinds ───
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} https{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }}docs.noctalia.dev{{ .chezmoi.pathSeparator }}getting-started{{ .chezmoi.pathSeparator }}keybinds{{ .chezmoi.pathSeparator }}
 
     Mod+Shift+ESCAPE                     { show-hotkey-overlay; }
 
-    // ─── Applications ───
-    Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
-    Mod+CTRL+Return                     hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+B                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
-    Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
-    Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
-    Mod+C                               hotkey-overlay-title="Open VS-Code: Code" { spawn "code"; }
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Applications ───
+    Mod+Return                          hotkey-overlay-title="Open Terminal{{ .chezmoi.pathListSeparator }} Alacritty" { spawn "alacritty"; }
+    Mod+CTRL+Return                     hotkey-overlay-title="Open App Launcher{{ .chezmoi.pathListSeparator }} noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+B                               hotkey-overlay-title="Open Browser{{ .chezmoi.pathListSeparator }} firefox" { spawn "firefox"; }
+    Mod+ALT+L                           hotkey-overlay-title="Lock Screen{{ .chezmoi.pathListSeparator }} noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+Shift+Q                         hotkey-overlay-title="Session Menu{{ .chezmoi.pathListSeparator }} noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+C                               hotkey-overlay-title="Open VS-Code{{ .chezmoi.pathListSeparator }} Code" { spawn "code"; }
 
-    // Please choose your own file manager.
-    Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Please choose your own {{ .chezmoi.config.mode }} manager.
+    Mod+E                               hotkey-overlay-title="File Manager{{ .chezmoi.pathListSeparator }} Nautilus" { spawn "nautilus"; }
 
-    // ─── Media Controls ───
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Media Controls ───
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
     XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
     XF86AudioMute                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
@@ -29,11 +29,11 @@ binds {
     XF86AudioPlay                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
     XF86AudioPause                      allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
 
-    // ─── Brightness Controls ───
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Brightness Controls ───
     XF86MonBrightnessUp                 allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
     XF86MonBrightnessDown               allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
 
-    // ─── Window Movement and Focus ───
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Window Movement and Focus ───
     Mod+Q                               { close-window; }
     Mod+W	                        { maximize-column; }
     Mod+Shift+W	                        { maximize-window-to-edges; }
@@ -74,7 +74,7 @@ binds {
     Mod+CTRL+ALT+UP                   { move-column-to-monitor-up; }
     Mod+CTRL+ALT+Down                 { move-column-to-monitor-down; }
 
-    // ─── Workspace Switching ───
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Workspace Switching ───
     Mod+Shift+WheelScrollDown            cooldown-ms=150 { move-column-to-workspace-down; }
     Mod+Shift+WheelScrollUp              cooldown-ms=150 { move-column-to-workspace-up; }
 
@@ -114,7 +114,7 @@ binds {
     Mod+Ctrl+Page_Up			{ move-workspace-up; }
     Mod+Ctrl+Page_Down			{ move-workspace-down; }
 
-    // ─── Layout Controls ───
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Layout Controls ───
     Mod+CTRL+F                          { expand-column-to-available-width; }
     Mod+S                               { center-column; }
     Mod+CTRL+W                          { center-visible-columns; }
@@ -123,23 +123,23 @@ binds {
     Mod+Shift+Minus                     { set-window-height "-10%"; }
     Mod+Shift+Equal                     { set-window-height "+10%"; }
 
-    // ─── Modes ───
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Modes ───
     Mod+T                               { toggle-window-floating; }
     Mod+F                               { fullscreen-window; }
     Mod+D                               { toggle-column-tabbed-display; }
 
-    // ─── Screenshots ───
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Screenshots ───
     Print                        { screenshot; }
     ALT+Print                        { screenshot-screen; }
     Mod+Print                        { screenshot-window; }
 
-    // ─── Emergency Escape Key ───
-    // Use this when a fullscreen app blocks your keybinds.
-    // It disables any active keyboard shortcut inhibitor, restoring control.
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Emergency Escape Key ───
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Use this when a fullscreen app blocks your keybinds.
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} It disables any active keyboard shortcut inhibitor, restoring control.
     Mod+ESCAPE                          allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    // ─── Exit / Power ───
-    CTRL+ALT+Delete                     { quit; } // Also quits Niri
-    Mod+Shift+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Exit {{ .chezmoi.pathSeparator }} Power ───
+    CTRL+ALT+Delete                     { quit; } {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Also quits Niri
+    Mod+Shift+P                         { power-off-monitors; } {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Turn off screens (useful for OLED or privacy)
     Mod+O                               repeat=false { toggle-overview; }
 }

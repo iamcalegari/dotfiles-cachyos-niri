@@ -1,0 +1,3 @@
+function plld --wraps='{{ .chezmoi.config.git.command }} pull origin develop --no-rebase' --description 'alias plld={{ .chezmoi.config.git.command }} pull origin develop --no-rebase'
+    {{ .chezmoi.config.git.command }} pull origin develop --no-rebase $argv
+end

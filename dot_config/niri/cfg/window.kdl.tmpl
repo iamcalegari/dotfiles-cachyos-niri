@@ -1,4 +1,4 @@
-// Wiki: https://github.com/niri-wm/niri/wiki/Configuration:-Window-Rules
+{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Wiki{{ .chezmoi.pathListSeparator }} https{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }}github.com{{ .chezmoi.pathSeparator }}niri-wm{{ .chezmoi.pathSeparator }}niri{{ .chezmoi.pathSeparator }}wiki{{ .chezmoi.pathSeparator }}Configuration{{ .chezmoi.pathListSeparator }}-Window-Rules
 
 workspace "Dev" {
 }
@@ -42,10 +42,10 @@ window-rule {
 	open-on-workspace "Dev"
 	open-maximized true
 
-	// Deixa a janela transparente (0.1 a 1.0)
-	// opacity 0.8 
+	{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Deixa a janela transparente (0.1 a 1.0)
+	{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} opacity 0.8 
 
-	// Ativa o desfoque atrás da janela (requer Niri v0.1.10+)
+	{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Ativa o desfoque atrás da janela (requer Niri v0.1.10+)
 }
 
 window-rule {
@@ -56,7 +56,7 @@ window-rule {
 
 window-rule {
 	match title="Discord" app-id="discord"
-	match app-id="^wah-TUodBlfE$" // WhatsApp - Web App
+	match app-id="^wah-TUodBlfE$" {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} WhatsApp - Web App
 	
 	open-on-workspace "Chat"
 	open-maximized false

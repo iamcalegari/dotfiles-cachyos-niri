@@ -1,0 +1,3 @@
+function st --wraps='{{ .chezmoi.config.git.command }} status' --description 'alias st={{ .chezmoi.config.git.command }} status'
+    {{ .chezmoi.config.git.command }} status $argv
+end

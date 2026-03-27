@@ -18,28 +18,28 @@ bluez-hid2hci
 bluez-libs
 bluez-obex
 bluez-utils
-bpftune-git
+bpftune-{{ .chezmoi.config.git.command }}
 btop
 btrfs-assistant
 btrfs-progs
 cachy-update
-cachyos-fish-config
-cachyos-grub-theme
-cachyos-hello
-cachyos-hooks
-cachyos-kernel-manager
-cachyos-keyring
-cachyos-micro-settings
-cachyos-mirrorlist
-cachyos-niri-noctalia
-cachyos-packageinstaller
-cachyos-plymouth-bootanimation
-cachyos-rate-mirrors
-cachyos-settings
-cachyos-v3-mirrorlist
-cachyos-v4-mirrorlist
-cachyos-wallpapers
-cachyos-zsh-config
+{{ .chezmoi.osRelease.id }}-fish-config
+{{ .chezmoi.osRelease.id }}-grub-theme
+{{ .chezmoi.osRelease.id }}-hello
+{{ .chezmoi.osRelease.id }}-hooks
+{{ .chezmoi.osRelease.id }}-kernel-manager
+{{ .chezmoi.osRelease.id }}-keyring
+{{ .chezmoi.osRelease.id }}-micro-settings
+{{ .chezmoi.osRelease.id }}-mirrorlist
+{{ .chezmoi.osRelease.id }}-niri-noctalia
+{{ .chezmoi.osRelease.id }}-packageinstaller
+{{ .chezmoi.osRelease.id }}-plymouth-bootanimation
+{{ .chezmoi.osRelease.id }}-rate-mirrors
+{{ .chezmoi.osRelease.id }}-settings
+{{ .chezmoi.osRelease.id }}-v3-mirrorlist
+{{ .chezmoi.osRelease.id }}-v4-mirrorlist
+{{ .chezmoi.osRelease.id }}-wallpapers
+{{ .chezmoi.osRelease.id }}-zsh-config
 cantarell-fonts
 chezmoi
 chwd
@@ -55,8 +55,8 @@ discord
 dmidecode
 dmraid
 dnsmasq
-docker
-docker-compose
+{{ .chezmoi.config.docker.command }}
+{{ .chezmoi.config.docker.command }}-compose
 dosfstools
 duf
 dvgrab
@@ -83,12 +83,12 @@ foomatic-db-ppds
 frei0r-plugins
 fsarchiver
 ghostscript
-git
+{{ .chezmoi.config.git.command }}
 glances
 gparted
 grub
 grub-btrfs-support
-grub-customizer-git
+grub-customizer-{{ .chezmoi.config.git.command }}
 grub-hook
 gsfonts
 gst-libav
@@ -118,13 +118,13 @@ libmythes
 libopenraw
 libreoffice-fresh
 libva-nvidia-driver
-linux-cachyos
-linux-cachyos-headers
-linux-cachyos-lts
-linux-cachyos-lts-headers
-linux-cachyos-lts-nvidia-open
-linux-cachyos-nvidia-open
-linux-firmware
+{{ .chezmoi.os }}-{{ .chezmoi.osRelease.id }}
+{{ .chezmoi.os }}-{{ .chezmoi.osRelease.id }}-headers
+{{ .chezmoi.os }}-{{ .chezmoi.osRelease.id }}-lts
+{{ .chezmoi.os }}-{{ .chezmoi.osRelease.id }}-lts-headers
+{{ .chezmoi.os }}-{{ .chezmoi.osRelease.id }}-lts-nvidia-open
+{{ .chezmoi.os }}-{{ .chezmoi.osRelease.id }}-nvidia-open
+{{ .chezmoi.os }}-firmware
 logrotate
 lsb-release
 lsscsi
@@ -168,7 +168,7 @@ os-prober
 pacman-contrib
 paru
 pavucontrol
-perl
+{{ .chezmoi.config.interpreters.pl.command }}
 pipewire-alsa
 pipewire-pulse
 pkgfile
@@ -183,7 +183,7 @@ python-defusedxml
 python-packaging
 python-pyqt5
 python-reportlab
-rbw
+{{ .chezmoi.config.rbw.command }}
 rebuild-detector
 reflector
 ripgrep

@@ -1,0 +1,3 @@
+function psh --wraps='{{ .chezmoi.config.git.command }} push' --description 'alias psh={{ .chezmoi.config.git.command }} push'
+    {{ .chezmoi.config.git.command }} push $argv
+end

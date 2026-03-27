@@ -1,0 +1,3 @@
+function co --wraps='{{ .chezmoi.config.git.command }} checkout' --description 'alias co={{ .chezmoi.config.git.command }} checkout'
+    {{ .chezmoi.config.git.command }} checkout $argv
+end

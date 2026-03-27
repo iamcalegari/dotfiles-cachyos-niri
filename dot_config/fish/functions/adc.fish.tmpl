@@ -1,0 +1,3 @@
+function adc
+    {{ .chezmoi.config.git.command }} {{ .chezmoi.command }} . && {{ .chezmoi.config.git.command }} commit -m "$argv" 
+end
