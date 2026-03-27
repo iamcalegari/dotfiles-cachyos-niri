@@ -1,7 +1,0 @@
-com.bitwarden.desktop
-com.getpostman.Postman
-com.spotify.Client
-dev.zed.Zed
-io.github.TanmayPatil105.verse
-org.gnome.TextEditor
-org.pvermeer.WebAppHub
