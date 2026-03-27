@@ -1,0 +1,71 @@
+// Wiki: https://github.com/niri-wm/niri/wiki/Configuration:-Window-Rules
+
+workspace "Dev" {
+}
+
+workspace "Browser" {
+}
+
+workspace "Terminal" {
+}
+
+workspace "Chat" {
+}
+
+workspace "Media" {
+}
+
+workspace "Others" {
+}
+
+
+window-rule {
+	default-column-width { proportion 0.75; }
+
+	geometry-corner-radius 12
+    	clip-to-geometry true
+    	tiled-state true
+
+	open-focused true
+}
+
+
+window-rule {
+	match title="^Mozilla Firefox$" app-id="^firefox$" 
+	open-on-workspace "Browser"
+	open-maximized true
+}
+
+window-rule {
+	match title="Code"
+	match title="Compass"
+	open-on-workspace "Dev"
+	open-maximized true
+
+	// Deixa a janela transparente (0.1 a 1.0)
+	// opacity 0.8 
+
+	// Ativa o desfoque atrás da janela (requer Niri v0.1.10+)
+}
+
+window-rule {
+	match title="Alacritty"
+	open-on-workspace "Terminal"
+	open-maximized false
+}
+
+window-rule {
+	match title="Discord" app-id="discord"
+	match app-id="^wah-TUodBlfE$" // WhatsApp - Web App
+	
+	open-on-workspace "Chat"
+	open-maximized false
+
+	default-column-width { proportion 0.65; }
+}
+
+window-rule {
+	match title="Spotify"
+	open-on-workspace "Media"
+	open-maximized false
+}
