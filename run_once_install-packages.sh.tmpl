@@ -9,12 +9,6 @@ echo -e "${GREEN}--- Iniciando restauração do ambiente CachyOS (Niri) ---${NC}
 # 1. Atualizar base do sistema
 sudo pacman -Syu --noconfirm
 
-# 1.1 Check nvidia drivers 
-if lspci | grep -qi nvidia; then
-    sudo pacman -S --needed nvidia-cachyos-dkms nvidia-utils
-fi
-
-
 # 2. Instalar pacotes do Pacman/AUR
 # Usamos --needed para não reinstalar o que já existe
 if [ -f "$HOME/.config/packages-pacman.txt" ]; then
