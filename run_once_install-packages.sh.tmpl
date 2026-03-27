@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Cores para o terminal
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+echo -e "${GREEN}--- Iniciando restauração do ambiente CachyOS (Niri) ---${NC}"
+
+# 1. Atualizar base do sistema
+sudo pacman -Syu --noconfirm
+
+# 2. Instalar pacotes do Pacman/AUR
+# Usamos --needed para não reinstalar o que já existe
+if [ -f "$HOME/.config/packages-pacman.txt" ]; then
+    echo -e "${GREEN}Instalando pacotes do sistema...${NC}"
+    sudo pacman -S --needed --noconfirm - < "$HOME/.config/packages-pacman.txt"
+fi
+
+# 3. Instalar Flatpaks
+if [ -f "$HOME/.config/packages-flatpak.txt" ]; then
+    echo -e "${GREEN}Instalando aplicativos Flatpak...${NC}"
+    # Verifica se flatpak está instalado antes de rodar
+    if command -v flatpak &> /dev/null; then
+        xargs -a "$HOME/.config/packages-flatpak.txt" flatpak install -y --noninteractive
+    fi
+fi
+
+echo -e "${GREEN}--- Restauração concluída! Reinicie o Niri para aplicar tudo. ---${NC}"
