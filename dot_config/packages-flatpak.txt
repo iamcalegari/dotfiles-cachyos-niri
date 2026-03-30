@@ -1,7 +1,10 @@
 com.bitwarden.desktop
 com.getpostman.Postman
 com.spotify.Client
+com.warlordsoftwares.youtube-downloader-4ktube
 dev.zed.Zed
 io.github.TanmayPatil105.verse
 org.gnome.TextEditor
+org.nicotine_plus.Nicotine
 org.pvermeer.WebAppHub
+page.codeberg.tahoso.azul-box
