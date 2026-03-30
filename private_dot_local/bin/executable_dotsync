@@ -23,8 +23,8 @@ chezmoi add -a ~/.config/niri/ \
 # 3.2 .local/
 echo "➕️ Adicionando arquivos locais ao Chezmoi..."
 chezmoi add ~/.local/bin/ \
-            ~/.local/share/app-icons/ 
-            # ~/.local/share/applications/ \
+            ~/.local/share/app-icons/ \
+            ~/.local/share/applications/ 
             # ~/.local/share/color-schemes/ \
             # ~/.local/share/fonts/ \
             # ~/.local/share/vicinae/ \
