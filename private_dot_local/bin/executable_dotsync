@@ -25,10 +25,10 @@ echo "➕️ Adicionando arquivos locais ao Chezmoi..."
 chezmoi add ~/.local/bin/ \
             ~/.local/share/app-icons/ \
             ~/.local/share/applications/ \
-            ~/.local/share/color-schemes/ 
-            # ~/.local/share/fonts/ \
-            # ~/.local/share/vicinae/ \
-            # ~/.local/share/wallpapers/
+            ~/.local/share/color-schemes/ \
+            ~/.local/share/vicinae/ \
+            ~/.local/share/wallpapers/ 
+            # ~/.local/share/fonts/ 
 
 
 # 3.3 .ssh/
