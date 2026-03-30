@@ -18,7 +18,6 @@ workspace "Media" {
 workspace "Others" {
 }
 
-
 window-rule {
 	default-column-width { proportion 0.75; }
 
@@ -31,6 +30,21 @@ window-rule {
 
 	open-focused true
 }
+
+window-rule {
+	match app-id="^emote$"
+
+	open-on-workspace "current"
+	default-column-width { proportion 0.75; }
+
+	geometry-corner-radius 12
+    	clip-to-geometry true
+    	tiled-state false
+
+	open-focused true
+}
+
+
 
 
 window-rule {
@@ -52,9 +66,13 @@ window-rule {
 }
 
 window-rule {
-	match title="Alacritty"
+	match app-id="^Alacritty$"
+	
 	open-on-workspace "Terminal"
 	open-maximized false
+	
+	
+	default-column-width { proportion 0.50; }
 }
 
 window-rule {
@@ -72,3 +90,5 @@ window-rule {
 	open-on-workspace "Media"
 	open-maximized false
 }
+
+
