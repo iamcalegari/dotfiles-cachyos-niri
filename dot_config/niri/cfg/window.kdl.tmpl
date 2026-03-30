@@ -87,8 +87,11 @@ window-rule {
 
 window-rule {
 	match title="Spotify"
+	match title="^Vinyl$"
+	match title="music"
+
+	match title="(?i)\\b(music|sound|audio|song|track|playlist|album)\\b"
+
 	open-on-workspace "Media"
 	open-maximized false
 }
-
-

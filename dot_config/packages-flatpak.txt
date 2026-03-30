@@ -4,7 +4,11 @@ com.spotify.Client
 com.warlordsoftwares.youtube-downloader-4ktube
 dev.zed.Zed
 io.github.TanmayPatil105.verse
+org.freac.freac
 org.gnome.TextEditor
+org.gnome.gitlab.YaLTeR.VideoTrimmer
+org.musicbrainz.Picard
 org.nicotine_plus.Nicotine
 org.pvermeer.WebAppHub
+page.codeberg.M23Snezhok.Vinyl
 page.codeberg.tahoso.azul-box
