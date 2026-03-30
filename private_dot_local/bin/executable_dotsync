@@ -2,55 +2,59 @@
 
 # 1. Exportar pacotes do sistema (incluindo AUR via pacman/paru/yay)
 # No CachyOS, pacman lista tudo que foi instalado explicitamente.
+echo "📦️ Exportando lista de pacotes do sistema..."
 pacman -Qe | awk '{print $1}' > ~/.config/packages-pacman.txt
 
 # 2. Exportar lista de Flatpaks (apenas o ID do app para reinstalação fácil)
+echo "📦️ Exportando lista de Flatpaks..."
 flatpak list --app --columns=application > ~/.config/packages-flatpak.txt
 
+echo "📁 Exportando arquivos essenciais para o Chezmoi..."
 # 3. Adicionar arquivos essenciais ao Chezmoi
 # 3.1 .config/
-chezmoi add ~/.config/niri/ \
+echo "➕️ Adicionando arquivos de configuração ao Chezmoi..."
+chezmoi add -a ~/.config/niri/ \
             ~/.config/alacritty/ \
             ~/.config/fish/ \
-            ~/.config/noctalia/ \
             ~/.config/packages-pacman.txt \
             ~/.config/packages-flatpak.txt
-
-rm -rf ~/.local/share/chezmoi/dot_config/noctalia/plugins/assistant-panel
+            # ~/.config/noctalia/ \
 
 # 3.2 .local/
-chezmoi add ~/.local/bin/ \
-            ~/.local/share/app-icons/ \
-            ~/.local/share/applications/ \
-            ~/.local/share/color-schemes/ \
-            ~/.local/share/Emote/ \
-            ~/.local/share/fonts/ \
-            ~/.local/share/nvim/ \
-            ~/.local/share/omf/ \
-            ~/.local/share/sddm/ \
-            ~/.local/share/vicinae/ \
-            ~/.local/share/wallpapers/ 
+echo "➕️ Adicionando arquivos locais ao Chezmoi..."
+chezmoi add ~/.local/bin/ 
+            # ~/.local/share/app-icons/ \
+            # ~/.local/share/applications/ \
+            # ~/.local/share/color-schemes/ \
+            # ~/.local/share/fonts/ \
+            # ~/.local/share/vicinae/ \
+            # ~/.local/share/wallpapers/
+
 
 # 3.3 .ssh/
 # chezmoi add ~/.ssh/
 
 # 3.4 .rc
-chezmoi add ~/.bashrc \
-            ~/.zshrc \
-            ~/.nvidia-settings-rc
-            # ~/.npmrc \
+# echo "➕️ Adicionando arquivos .rc ao Chezmoi..."
+# chezmoi add -a ~/.bashrc \
+#             ~/.zshrc \
+#             ~/.nvidia-settings-rc
+#             # ~/.npmrc \
 
 # 3.5 Sensible dotfiles
 # chezmoi add --template ~/.gitconfig
 
-
-
-
-
 # 4. Git Push automático
+echo "🚀 Sincronizando ambiente CachyOS..."
 cd (chezmoi source-path)
+
+echo "🆕 Adicionando alterações ao commit..."
 git add .
+
+echo "💬 Fazendo commit: 'Sync: (date +'%Y-%m-%d %H:%M')'..."
 git commit -m "Sync: (date +'%Y-%m-%d %H:%M')"
+
+echo "📤 Fazendo push..."
 git push origin main
 
-echo "🚀 Ambiente CachyOS sincronizado com sucesso!"
+echo "🚀 Ambiente CachyOS sincronizado com sucesso! ✅️"
