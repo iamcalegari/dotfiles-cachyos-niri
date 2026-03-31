@@ -5,6 +5,7 @@ com.spotify.Client
 com.warlordsoftwares.youtube-downloader-4ktube
 dev.zed.Zed
 io.github.TanmayPatil105.verse
+md.obsidian.Obsidian
 org.freac.freac
 org.gnome.TextEditor
 org.gnome.gitlab.YaLTeR.VideoTrimmer
