@@ -5,4 +5,7 @@
 
     {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Runs kanshi for different screen profiles  
     spawn-sh-at-startup "kanshi &"
-	
+
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Inicializa o gerenciador de segredos para o Compass{{ .chezmoi.pathSeparator }}Electron
+    spawn-sh-at-startup "dbus-update-activation-environment --all"
+    spawn-sh-at-startup "gnome-keyring-daemon --start --components=secrets"

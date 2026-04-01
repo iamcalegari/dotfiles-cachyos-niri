@@ -16,6 +16,7 @@ echo "➕️ Adicionando arquivos de configuração ao Chezmoi..."
 chezmoi add -a ~/.config/niri/ \
             ~/.config/alacritty/ \
             ~/.config/fish/ \
+            ~/.config/mongodb-compass.conf \
             ~/.config/packages-pacman.txt \
             ~/.config/packages-flatpak.txt
             # ~/.config/noctalia/ \
