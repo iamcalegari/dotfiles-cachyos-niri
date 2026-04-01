@@ -1,6 +1,20 @@
 {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ────────────── Startup Applications ──────────────
 {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} https{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }}github.com{{ .chezmoi.pathSeparator }}YaLTeR{{ .chezmoi.pathSeparator }}niri{{ .chezmoi.pathSeparator }}wiki{{ .chezmoi.pathSeparator }}Configuration{{ .chezmoi.pathListSeparator }}-Miscellaneous#spawn-sh-at-startup
 
+    environment {
+        {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Define o socket do agente SSH
+        SSH_AUTH_SOCK "{{ .chezmoi.pathSeparator }}run{{ .chezmoi.pathSeparator }}user{{ .chezmoi.pathSeparator }}{{ .chezmoi.gid }}{{ .chezmoi.pathSeparator }}gcr{{ .chezmoi.pathSeparator }}ssh"
+    }
+
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Inicia o Valent no modo "serviço" (sem abrir a janela) assim que logar no Niri
+    spawn-at-startup "valent" "--gapplication-service"
+
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Garante que a variável seja importada pelo systemd{{ .chezmoi.pathSeparator }}dbus
+    spawn-at-startup "systemctl" "--user" "import-environment" "SSH_AUTH_SOCK"
+
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Inicia o daemon do Valent em background
+    spawn-at-startup "valent" "--gapplication-service"
+    
     spawn-sh-at-startup "qs -c noctalia-shell"
 
     {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Runs kanshi for different screen profiles  
