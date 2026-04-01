@@ -18,6 +18,9 @@ workspace "Media" {
 workspace "Others" {
 }
 
+workspace "Notes" {
+    open-on-output "eDP-1"
+}
 
 {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Wiki{{ .chezmoi.pathListSeparator }} https{{ .chezmoi.pathListSeparator }}{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }}github.com{{ .chezmoi.pathSeparator }}niri-wm{{ .chezmoi.pathSeparator }}niri{{ .chezmoi.pathSeparator }}wiki{{ .chezmoi.pathSeparator }}Configuration{{ .chezmoi.pathListSeparator }}-Window-Rules
 window-rule {
@@ -96,4 +99,11 @@ window-rule {
 
 	open-on-workspace "Media"
 	open-maximized false
+}
+
+window-rule {
+	match app-id="^obsidian&"
+
+	open-on-workspace "Notes"
+	open-maximized-to-edges true
 }
