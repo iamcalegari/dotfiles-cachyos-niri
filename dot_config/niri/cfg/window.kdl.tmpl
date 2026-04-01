@@ -78,7 +78,7 @@ window-rule {
 
 window-rule {
 	match title="Discord" app-id="discord"
-	match app-id="^wah-TUodBlfE$" {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} WhatsApp - Web App
+	match app-id="^wah-TUodBlfE$" 		{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} WhatsApp - Web App
 	
 	open-on-workspace "Chat"
 	open-maximized false
@@ -90,8 +90,7 @@ window-rule {
 	match title="Spotify"
 	match title="^Vinyl$"
 	match title="music"
-
-	match title="(?i)\\b(music|sound|audio|song|track|playlist|album)\\b"
+	match app-id="^wah-E2ZQDVLp$"		{{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} YouTube - Web App
 
 	open-on-workspace "Media"
 	open-maximized false

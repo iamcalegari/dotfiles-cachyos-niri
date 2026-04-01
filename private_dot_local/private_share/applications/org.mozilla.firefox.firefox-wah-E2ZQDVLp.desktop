@@ -1,0 +1,20 @@
+[Desktop Entry]
+Categories=AudioVideo;Video
+Comment=YouTube is the world’s largest free video-sharing platform and second-most popular social network.
+Exec=firefox --class=wah-E2ZQDVLp --name=wah-E2ZQDVLp --profile=/home/alan/.var/app/org.pvermeer.WebAppHub/data/web-app-hub/profiles/firefox/E2ZQDVLp --no-remote https://www.youtube.com/
+Icon=/home/alan/.var/app/org.pvermeer.WebAppHub/data/web-app-hub/icons/E2ZQDVLp.png
+Name=YouTube
+StartupWMClass=wah-E2ZQDVLp
+Terminal=false
+Type=Application
+Version=1.0
+X-MultipleArgs=false
+X-WAH=true
+X-WAH-BROWSER-ID=firefox_firefox
+X-WAH-ID=E2ZQDVLp
+X-WAH-ISOLATE=true
+X-WAH-MAXIMIZE=false
+X-WAH-PROFILE=/home/alan/.var/app/org.pvermeer.WebAppHub/data/web-app-hub/profiles/firefox/E2ZQDVLp
+X-WAH-URL=https://www.youtube.com/
+X-WAH-VERSION=0.10.1
+
