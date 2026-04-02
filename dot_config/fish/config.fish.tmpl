@@ -9,3 +9,5 @@ source {{ .chezmoi.pathSeparator }}usr{{ .chezmoi.pathSeparator }}share{{ .chezm
 starship init fish | source 	# Tema
 
 zoxide init fish | source	# Zoxide
+
+set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR{{ .chezmoi.pathSeparator }}gcr{{ .chezmoi.pathSeparator }}ssh"	# Valent
