@@ -6,15 +6,8 @@
         SSH_AUTH_SOCK "{{ .chezmoi.pathSeparator }}run{{ .chezmoi.pathSeparator }}user{{ .chezmoi.pathSeparator }}{{ .chezmoi.gid }}{{ .chezmoi.pathSeparator }}gcr{{ .chezmoi.pathSeparator }}ssh"
     }
 
-    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Inicia o Valent no modo "serviço" (sem abrir a janela) assim que logar no Niri
-    spawn-at-startup "valent" "--gapplication-service"
-
-    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Garante que a variável seja importada pelo systemd{{ .chezmoi.pathSeparator }}dbus
-    spawn-at-startup "systemctl" "--user" "import-environment" "SSH_AUTH_SOCK"
-
-    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Inicia o daemon do Valent em background
-    spawn-at-startup "valent" "--gapplication-service"
     
+
     spawn-sh-at-startup "qs -c noctalia-shell"
 
     {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Runs kanshi for different screen profiles  
@@ -23,3 +16,12 @@
     {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Inicializa o gerenciador de segredos para o Compass{{ .chezmoi.pathSeparator }}Electron
     spawn-sh-at-startup "dbus-update-activation-environment --all"
     spawn-sh-at-startup "gnome-keyring-daemon --start --components=secrets"
+
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Mata instâncias órfãs antes de subir
+    spawn-at-startup "pkill" "-9" "valent"
+
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Garante que o ambiente D-Bus saiba onde está o SSH (para o SFTP do celular)
+    spawn-at-startup "systemctl" "--user" "import-environment" "SSH_AUTH_SOCK"
+
+    {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Inicia o Valent automaticamente
+    spawn-at-startup "valent" "--gapplication-service"
