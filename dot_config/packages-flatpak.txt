@@ -8,7 +8,9 @@ dev.zed.Zed
 io.github.TanmayPatil105.verse
 md.obsidian.Obsidian
 org.freac.freac
+org.gnome.Showtime
 org.gnome.TextEditor
+org.gnome.Totem
 org.gnome.gitlab.YaLTeR.VideoTrimmer
 org.musicbrainz.Picard
 org.nicotine_plus.Nicotine
