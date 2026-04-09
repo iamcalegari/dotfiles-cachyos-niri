@@ -45,6 +45,18 @@ chezmoi add ~/.local/bin/ \
 # 3.5 Sensible dotfiles
 # chezmoi add --template ~/.gitconfig
 
+# 4. Grub Theme (Configuração)
+echo "➕ Verificando configuração do Grub..."
+# Adiciona o arquivo principal do Grub para o Chezmoi gerenciar as flags e o caminho do tema
+chezmoi add /etc/default/grub
+
+# Para garantir que o tema exista, pode clonar o repositório na pasta Tmp, 
+# mas não precisa dar 'chezmoi add' na pasta toda.
+if not test -d ~/Tmp/Solara-grub2-theme
+    echo "📥 Baixando tema Solara para backup/instalação..."
+    git clone --depth 1 https://github.com/vinceliuice/Solara-grub2-theme.git ~/Tmp/Solara-grub2-theme
+end
+
 # 4. Git Push automático
 echo "🚀 Sincronizando ambiente CachyOS..."
 cd (chezmoi source-path)
