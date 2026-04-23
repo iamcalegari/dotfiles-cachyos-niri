@@ -10,6 +10,7 @@ io.github.TanmayPatil105.verse
 io.github.davidoc26.wallpaper_selector
 md.obsidian.Obsidian
 org.freac.freac
+org.gnome.Loupe
 org.gnome.Showtime
 org.gnome.TextEditor
 org.gnome.Totem
