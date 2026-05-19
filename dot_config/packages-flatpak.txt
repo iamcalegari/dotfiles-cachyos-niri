@@ -3,6 +3,7 @@ com.bitwarden.desktop
 com.discordapp.Discord
 com.github.johnfactotum.Foliate
 com.spotify.Client
+com.todoist.Todoist
 com.warlordsoftwares.youtube-downloader-4ktube
 dev.zed.Zed
 io.github.TanmayPatil105.verse
