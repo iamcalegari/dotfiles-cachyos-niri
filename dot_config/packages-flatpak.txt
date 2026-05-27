@@ -2,6 +2,7 @@ ca.andyholmes.Valent
 com.bitwarden.desktop
 com.discordapp.Discord
 com.github.johnfactotum.Foliate
+com.pikatorrent.PikaTorrent
 com.spotify.Client
 com.todoist.Todoist
 com.warlordsoftwares.youtube-downloader-4ktube
@@ -15,6 +16,7 @@ org.gnome.Showtime
 org.gnome.TextEditor
 org.gnome.Totem
 org.gnome.gitlab.YaLTeR.VideoTrimmer
+org.kde.ktorrent
 org.musicbrainz.Picard
 org.nicotine_plus.Nicotine
 org.pvermeer.WebAppHub
