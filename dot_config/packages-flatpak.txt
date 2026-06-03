@@ -1,6 +1,7 @@
 ca.andyholmes.Valent
 com.bitwarden.desktop
 com.discordapp.Discord
+com.github.jeromerobert.pdfarranger
 com.github.johnfactotum.Foliate
 com.pikatorrent.PikaTorrent
 com.spotify.Client
@@ -9,6 +10,7 @@ com.warlordsoftwares.youtube-downloader-4ktube
 dev.zed.Zed
 io.github.TanmayPatil105.verse
 io.github.davidoc26.wallpaper_selector
+io.gitlab.luiggircardoso.Draft
 md.obsidian.Obsidian
 org.freac.freac
 org.gnome.Loupe
