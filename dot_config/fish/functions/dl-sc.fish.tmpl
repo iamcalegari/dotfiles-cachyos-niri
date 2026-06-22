@@ -1,0 +1,28 @@
+function dl-sc --description 'Baixa playlist do SoundCloud em WAV para ~{{ .chezmoi.pathSeparator }}Music{{ .chezmoi.pathSeparator }}Download{{ .chezmoi.pathSeparator }}'
+    if test (count $argv) -lt 1
+        echo "Erro{{ .chezmoi.pathListSeparator }} Você precisa passar o link da playlist."
+        echo "Uso{{ .chezmoi.pathListSeparator }} dl-sc <URL> [Nome da Pasta]"
+        return 1
+    end
+
+    set url $argv[1]
+    
+    # Se você passar um segundo argumento, vira uma subpasta.
+    # Se não, joga direto na raiz da pasta Download.
+    if test (count $argv) -ge 2
+        set target_dir "$HOME{{ .chezmoi.pathSeparator }}Music{{ .chezmoi.pathSeparator }}Download{{ .chezmoi.pathSeparator }}$argv[2]"
+    else
+        set target_dir "$HOME{{ .chezmoi.pathSeparator }}Music{{ .chezmoi.pathSeparator }}Download"
+    end
+
+    mkdir -p $target_dir
+    cd $target_dir
+
+    echo "📥 Baixando playlist em{{ .chezmoi.pathListSeparator }} $target_dir"
+    
+    yt-dlp -i -f bestaudio --extract-audio --audio-format wav \
+        -o "%(playlist_index)s - %(uploader)s - %(title)s.%(ext)s" \
+        $url
+
+    echo "✅ Download concluído!"
+end
