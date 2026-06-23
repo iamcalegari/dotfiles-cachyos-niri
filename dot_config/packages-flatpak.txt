@@ -13,6 +13,7 @@ io.github.davidoc26.wallpaper_selector
 io.gitlab.luiggircardoso.Draft
 md.obsidian.Obsidian
 org.freac.freac
+org.gnome.Calculator
 org.gnome.Loupe
 org.gnome.Showtime
 org.gnome.TextEditor
