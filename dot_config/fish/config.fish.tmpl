@@ -11,3 +11,7 @@ starship init fish | source 	# Tema
 zoxide init fish | source	# Zoxide
 
 set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR{{ .chezmoi.pathSeparator }}gcr{{ .chezmoi.pathSeparator }}ssh"	# Valent
+
+# bun
+set --export BUN_INSTALL "$HOME{{ .chezmoi.pathSeparator }}.bun"
+set --export PATH $BUN_INSTALL{{ .chezmoi.pathSeparator }}bin $PATH
