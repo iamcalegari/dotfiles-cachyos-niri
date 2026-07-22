@@ -10,6 +10,7 @@ com.warlordsoftwares.youtube-downloader-4ktube
 dev.zed.Zed
 io.github.TanmayPatil105.verse
 io.github.davidoc26.wallpaper_selector
+io.github.shonebinu.Defuse
 io.gitlab.luiggircardoso.Draft
 md.obsidian.Obsidian
 org.freac.freac
