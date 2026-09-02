@@ -11,63 +11,63 @@ icon = "noctalia.svg"
 # ============================================================================
 
 [colors.core]
-accent = "#efb7d0"
-accent_foreground = "#4a2438"
-background = "#161214"
-foreground = "#eae0e2"
-secondary_background = "#231e20"
-border = "#4f4448"
+accent = "#feb786"
+accent_foreground = "#4f2501"
+background = "#18120f"
+foreground = "#ece0da"
+secondary_background = "#241e1b"
+border = "#52443b"
 
 # ============================================================================
 # Window Borders
 # ============================================================================
 
 [colors.main_window]
-border = "#4f4448"  # Softer for main app
+border = "#52443b"  # Softer for main app
 
 [colors.settings_window]
-border = "#9c8d92"  # Stronger but not primary (less distracting)
+border = "#9f8d83"  # Stronger but not primary (less distracting)
 
 # ============================================================================
 # Accent Palette
 # ============================================================================
 
 [colors.accents]
-blue = "#efb7d0"
-green = "#f9b89f"
-magenta = "#dbbfca"
+blue = "#feb786"
+green = "#cbca7e"
+magenta = "#e5bfa7"
 orange = { name = "#ffb4ab", lighter = 40 }
 red = "#ffb4ab"
-yellow = { name = "#f9b89f", lighter = 80 }
-cyan = { name = "#efb7d0", lighter = 50 }
-purple = "#dbbfca"
+yellow = { name = "#cbca7e", lighter = 80 }
+cyan = { name = "#feb786", lighter = 50 }
+purple = "#e5bfa7"
 
 # ============================================================================
 # Text System
 # ============================================================================
 
 [colors.text]
-default = "#eae0e2"
-muted = "#d3c2c8"
+default = "#ece0da"
+muted = "#d7c3b7"
 danger = "#ffb4ab"
-success = "#f9b89f"
-placeholder = { name = "#d3c2c8", opacity = 0.6 }
+success = "#cbca7e"
+placeholder = { name = "#d7c3b7", opacity = 0.6 }
 
 [colors.text.selection]
-background = "#efb7d0"
-foreground = "#4a2438"
+background = "#feb786"
+foreground = "#4f2501"
 
 [colors.text.links]
-default = "#efb7d0"
-visited = { name = "#f9b89f", darker = 20 }
+default = "#feb786"
+visited = { name = "#cbca7e", darker = 20 }
 
 # ============================================================================
 # Input Fields
 # ============================================================================
 
 [colors.input]
-border = "#9c8d92"
-border_focus = "#efb7d0"
+border = "#9f8d83"
+border_focus = "#feb786"
 border_error = "#ffb4ab"
 
 # ============================================================================
@@ -75,53 +75,53 @@ border_error = "#ffb4ab"
 # ============================================================================
 
 [colors.button.primary]
-background = "#2d292a"
-foreground = "#eae0e2"
+background = "#2f2925"
+foreground = "#ece0da"
 
 [colors.button.primary.hover]
-background = "#383335"  
+background = "#3a332f"  
 
 [colors.button.primary.focus]
-outline = "#efb7d0"
+outline = "#feb786"
 
 # ============================================================================
 # Lists
 # ============================================================================
 
 [colors.list.item.hover]
-background = { name = "#633a4f", opacity = 0.25 }  
-foreground = "#eae0e2"
+background = { name = "#6b3b14", opacity = 0.25 }  
+foreground = "#ece0da"
 
 [colors.list.item.selection]
-background = { name = "#633a4f", opacity = 0.50 }
-foreground = "#ffd8e8"
-secondary_background = "#633a4f"
-secondary_foreground = "#ffd8e8"
+background = { name = "#6b3b14", opacity = 0.50 }
+foreground = "#ffdcc6"
+secondary_background = "#6b3b14"
+secondary_foreground = "#ffdcc6"
 
 # ============================================================================
 # Grid Items
 # ============================================================================
 
 [colors.grid.item]
-background = "#231e20"
+background = "#241e1b"
 
 [colors.grid.item.hover]
-outline = { name = "#dbbfca", opacity = 0.8 }
+outline = { name = "#e5bfa7", opacity = 0.8 }
 
 [colors.grid.item.selection]
-outline = { name = "#efb7d0" }
+outline = { name = "#feb786" }
 
 # ============================================================================
 # Scrollbars
 # ============================================================================
 
 [colors.scrollbars]
-background = { name = "#efb7d0", opacity = 0.2 }
+background = { name = "#feb786", opacity = 0.2 }
 
 # ============================================================================
 # Loading States
 # ============================================================================
 
 [colors.loading]
-bar = "#efb7d0"
-spinner = "#efb7d0"
+bar = "#feb786"
+spinner = "#feb786"
