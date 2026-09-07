@@ -10,10 +10,10 @@ binds {
 
     {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal{{ .chezmoi.pathListSeparator }} Alacritty" { spawn "alacritty"; }
-    Mod+CTRL+Return                     hotkey-overlay-title="Open App Launcher{{ .chezmoi.pathListSeparator }} noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+CTRL+Return                     hotkey-overlay-title="Open App Launcher{{ .chezmoi.pathListSeparator }} noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+B                               hotkey-overlay-title="Open Browser{{ .chezmoi.pathListSeparator }} firefox" { spawn "firefox"; }
-    Mod+ALT+L                           hotkey-overlay-title="Lock Screen{{ .chezmoi.pathListSeparator }} noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
-    Mod+Shift+Q                         hotkey-overlay-title="Session Menu{{ .chezmoi.pathListSeparator }} noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+ALT+L                           hotkey-overlay-title="Lock Screen{{ .chezmoi.pathListSeparator }} noctalia lock" { spawn-sh "noctalia msg session lock"; }
+    Mod+Shift+Q                         hotkey-overlay-title="Session Menu{{ .chezmoi.pathListSeparator }} noctalia sessionMenu" { spawn-sh "noctalia msg panel-toggle session"; }
     Mod+C                               hotkey-overlay-title="Open VS-Code{{ .chezmoi.pathListSeparator }} Code" { spawn "code"; }
 
     {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} Please choose your own {{ .chezmoi.config.mode }} manager.
@@ -22,18 +22,18 @@ binds {
     Ctrl+ALT+E                          hotkey-overlay-title="Emoji Picker{{ .chezmoi.pathListSeparator }} Emote" { spawn "emote"; }    
 
     {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Media Controls ───
-    XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
-    XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    XF86AudioMute                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-    XF86AudioMicMute                    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
-    XF86AudioNext                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
-    XF86AudioPrev                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
-    XF86AudioPlay                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
-    XF86AudioPause                      allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+    XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute                       allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+    XF86AudioMicMute                    allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
+    XF86AudioNext                       allow-when-locked=true { spawn-sh "noctalia msg media next"; }
+    XF86AudioPrev                       allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
+    XF86AudioPlay                       allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
+    XF86AudioPause                      allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
 
     {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Brightness Controls ───
-    XF86MonBrightnessUp                 allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
-    XF86MonBrightnessDown               allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+    XF86MonBrightnessUp                 allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown               allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
 
     {{ .chezmoi.pathSeparator }}{{ .chezmoi.pathSeparator }} ─── Window Movement and Focus ───
     Mod+Q                               { close-window; }
