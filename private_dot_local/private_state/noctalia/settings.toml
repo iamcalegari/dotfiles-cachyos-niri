@@ -1,8 +1,18 @@
 config_version = 14
 
 [bar.default]
-center = [ "workspaces" ]
-end = [ "media", "tray", "volume", "brightness", "battery", "notifications", "clock", "control-center" ]
+center = [ "workspaces", "noctalia/notes:notes" ]
+end = [
+    "noctalia/screen_recorder:recorder",
+    "media",
+    "tray",
+    "volume",
+    "brightness",
+    "battery",
+    "notifications",
+    "clock",
+    "control-center"
+]
 margin_edge = 6
 margin_ends = 6
 position = "top"
@@ -94,6 +104,9 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
 [osd]
 position = "bottom_right"
 
+[plugins]
+enabled = [ "noctalia/notes", "noctalia/screen_recorder" ]
+
 [shell]
 avatar_path = "/home/alan/Pictures/avatar/face.jpg"
 font_family = "Adwaita Sans"
@@ -168,10 +181,10 @@ transition_duration = 3000.0
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/dan-meyers-ucmEHogvn1g-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/cassie-boca-gFyy2Po7T-k-unsplash.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/dan-meyers-ucmEHogvn1g-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/cassie-boca-gFyy2Po7T-k-unsplash.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/dan-meyers-ucmEHogvn1g-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/cassie-boca-gFyy2Po7T-k-unsplash.jpg"
