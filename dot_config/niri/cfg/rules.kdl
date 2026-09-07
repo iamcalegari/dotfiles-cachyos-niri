@@ -15,3 +15,21 @@
         default-column-width { fixed 1080; }
         default-window-height { fixed 920; }
     }
+
+    // Efeito "vidro" (blur) nas superfícies do Noctalia — Niri 26.04+.
+    // O Noctalia pede o blur via ext_background_effect_v1; aqui só ajustamos.
+    layer-rule {
+        match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+        background-effect {
+            blur true
+            xray false
+        }
+    }
+
+    layer-rule {
+        match namespace="noctalia-window-switcher"
+        background-effect {
+            blur true
+            xray false
+        }
+    }

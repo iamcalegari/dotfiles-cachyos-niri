@@ -1,6 +1,17 @@
 config_version = 14
 
+[backdrop]
+blur_intensity = 0.29999999329447746
+enabled = true
+
 [bar.default]
+background_opacity = 0.20000000000000001
+border = "#ffffff2b"
+border_width = 1.0
+capsule = true
+capsule_fill = "#ffffff"
+capsule_opacity = 0.10000000000000001
+capsule_padding = 7
 center = [ "workspaces", "noctalia/notes:notes" ]
 end = [
     "noctalia/screen_recorder:recorder",
@@ -13,13 +24,28 @@ end = [
     "clock",
     "control-center"
 ]
+hover_highlight = true
 margin_edge = 6
 margin_ends = 6
 position = "top"
+radius = 14
+shadow = true
 start = [ "launcher", "cpu", "temp", "ram", "active_window" ]
+
+[battery.device."/org/freedesktop/UPower/devices/phone_dev_3C_1E_B5_15_96_98"]
+warning_threshold = 10
 
 [brightness]
 enable_ddcutil = true
+
+[calendar]
+enabled = true
+
+    [calendar.account.iamcalegari20]
+    type = "google"
+
+[control_center]
+sidebar_section = "full"
 
 [desktop_widgets]
 schema_version = 2
@@ -33,7 +59,9 @@ widget_order = []
     [desktop_widgets.widget]
 
 [dock]
-background_opacity = 0.34999999217689037
+background_opacity = 0.20000000000000001
+border = "#ffffff2b"
+border_width = 1.0
 enabled = true
 icon_size = 42
 monitors = [ "HDMI-A-1", "eDP-1" ]
@@ -52,6 +80,8 @@ pinned = [
     "page.codeberg.M23Snezhok.Vinyl"
 ]
 position = "bottom"
+radius = 16
+shadow = true
 show_dots = true
 
 [hooks]
@@ -110,7 +140,9 @@ enabled = [ "noctalia/notes", "noctalia/screen_recorder" ]
 [shell]
 avatar_path = "/home/alan/Pictures/avatar/face.jpg"
 font_family = "Adwaita Sans"
+niri_overview_type_to_launch_enabled = true
 polkit_agent = true
+screen_time_enabled = true
 time_format = "{:%I:%M %p}"
 
     [shell.launcher]
@@ -136,6 +168,8 @@ time_format = "{:%I:%M %p}"
     ]
 
     [shell.panel]
+    control_center_placement = "floating"
+    open_near_click_control_center = true
     transparency_mode = "glass"
 
 [theme]
