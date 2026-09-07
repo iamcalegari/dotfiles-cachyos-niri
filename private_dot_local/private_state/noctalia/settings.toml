@@ -1,9 +1,5 @@
 config_version = 14
 
-[backdrop]
-blur_intensity = 0.29999999329447746
-enabled = true
-
 [bar.default]
 background_opacity = 0.20000000000000001
 border = "#ffffff2b"
@@ -138,9 +134,9 @@ position = "bottom_right"
 enabled = [ "noctalia/notes", "noctalia/screen_recorder" ]
 
 [shell]
+app_icon_color = "secondary"
 avatar_path = "/home/alan/Pictures/avatar/face.jpg"
 font_family = "Adwaita Sans"
-niri_overview_type_to_launch_enabled = true
 polkit_agent = true
 screen_time_enabled = true
 time_format = "{:%I:%M %p}"
@@ -208,6 +204,7 @@ fill_color = "#000000"
 fill_mode = "crop"
 transition = [ "fade", "wipe", "disc", "stripes", "honeycomb" ]
 transition_duration = 3000.0
+transition_on_startup = true
 
     [wallpaper.automation]
     enabled = true
@@ -215,10 +212,10 @@ transition_duration = 3000.0
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/cassie-boca-gFyy2Po7T-k-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/ruedi-haberli-ZcVd6rcHSbg-unsplash.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/cassie-boca-gFyy2Po7T-k-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/ruedi-haberli-ZcVd6rcHSbg-unsplash.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/cassie-boca-gFyy2Po7T-k-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/ruedi-haberli-ZcVd6rcHSbg-unsplash.jpg"
