@@ -64,7 +64,10 @@ end
 
 # 5. Git Push automático
 echo "🚀 Sincronizando ambiente CachyOS..."
-cd (chezmoi source-path)
+if not cd (chezmoi source-path)
+    echo "❌ Não foi possível entrar no source do chezmoi." >&2
+    exit 1
+end
 
 echo "🆕 Adicionando alterações ao commit..."
 git add .
@@ -73,6 +76,11 @@ echo "💬 Fazendo commit: 'Sync: (date +'%Y-%m-%d %H:%M')'..."
 git commit -m "Sync: "(date +'%Y-%m-%d %H:%M')
 
 echo "📤 Fazendo push..."
-git push origin main
+if not git push origin main
+    echo "" >&2
+    echo "❌ Push falhou: as alterações estão commitadas localmente, mas NÃO foram para o remoto." >&2
+    echo "   Verifique o remote com: git -C (chezmoi source-path) remote -v" >&2
+    exit 1
+end
 
 echo "🚀 Ambiente CachyOS sincronizado com sucesso! ✅️"
