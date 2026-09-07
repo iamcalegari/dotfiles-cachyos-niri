@@ -215,10 +215,10 @@ transition_duration = 3000.0
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/luca-micheli-ruWkmt3nU58-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/cassie-boca-gFyy2Po7T-k-unsplash.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/luca-micheli-ruWkmt3nU58-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/cassie-boca-gFyy2Po7T-k-unsplash.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/luca-micheli-ruWkmt3nU58-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/cassie-boca-gFyy2Po7T-k-unsplash.jpg"
