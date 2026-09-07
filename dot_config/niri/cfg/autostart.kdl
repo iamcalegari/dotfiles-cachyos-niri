@@ -1,0 +1,27 @@
+// ────────────── Startup Applications ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
+
+    environment {
+        // Define o socket do agente SSH
+        SSH_AUTH_SOCK "/run/user/1000/gcr/ssh"
+    }
+
+    
+
+    spawn-at-startup "noctalia"
+
+    // Runs kanshi for different screen profiles  
+    spawn-sh-at-startup "kanshi &"
+
+    // Inicializa o gerenciador de segredos para o Compass/Electron
+    spawn-sh-at-startup "dbus-update-activation-environment --all"
+    spawn-sh-at-startup "gnome-keyring-daemon --start --components=secrets"
+
+    // Mata instâncias órfãs antes de subir
+    spawn-at-startup "pkill" "-9" "valent"
+
+    // Garante que o ambiente D-Bus saiba onde está o SSH (para o SFTP do celular)
+    spawn-at-startup "systemctl" "--user" "import-environment" "SSH_AUTH_SOCK"
+
+    // Inicia o Valent automaticamente
+    spawn-at-startup "valent" "--gapplication-service"

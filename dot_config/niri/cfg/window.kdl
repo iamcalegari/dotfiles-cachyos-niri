@@ -1,0 +1,125 @@
+// Wiki: https://github.com/niri-wm/niri/wiki/Configuration:-Named-Workspaces
+
+workspace "Dev" {
+    open-on-output "HDMI-A-1"
+//    open-on-output "eDP-1"
+}
+
+workspace "Browser" {
+    open-on-output "HDMI-A-1"
+//    open-on-output "eDP-1"
+}
+
+workspace "Terminal" {
+    open-on-output "HDMI-A-1"
+//    open-on-output "eDP-1"
+}
+
+workspace "Chat" {
+    open-on-output "HDMI-A-1"
+//    open-on-output "eDP-1"
+}
+
+workspace "Media" {
+    open-on-output "eDP-1"
+//    open-on-output "HDMI-A-1"
+}
+
+workspace "Others" {
+    open-on-output "HDMI-A-1"
+//    open-on-output "eDP-1"
+}
+
+workspace "Notes" {
+    open-on-output "eDP-1"
+//    open-on-output "HDMI-A-1"
+}
+
+// Wiki: https://github.com/niri-wm/niri/wiki/Configuration:-Window-Rules
+window-rule {
+	default-column-width { proportion 0.75; }
+
+	open-on-workspace "Others"
+	open-maximized false
+
+	geometry-corner-radius 12
+    	clip-to-geometry true
+    	tiled-state true
+
+	open-focused true
+}
+
+window-rule {
+	match app-id="^emote$"
+	match app-id="^org.gnome.Nautilus$"
+
+	open-on-workspace "current"
+	default-column-width { proportion 0.75; }
+
+	geometry-corner-radius 12
+    	clip-to-geometry true
+    	tiled-state false
+
+	open-focused true
+}
+
+
+
+
+window-rule {
+	match title="^Mozilla Firefox$" app-id="^firefox$" 
+	open-on-workspace "Browser"
+	open-maximized true
+}
+
+window-rule {
+	match title="Code"
+	match title="Compass"
+	match app-id="Postman"
+
+	open-on-workspace "Dev"
+	open-maximized true
+
+	// Deixa a janela transparente (0.1 a 1.0)
+	opacity 0.95
+
+	// Ativa o desfoque atrás da janela (requer Niri v0.1.10+)
+}
+
+window-rule {
+	match app-id="^Alacritty$"
+	
+	open-on-workspace "Terminal"
+	open-maximized false
+	
+	
+	default-column-width { proportion 0.50; }
+}
+
+window-rule {
+	match title="Discord" app-id="discord"
+	match app-id="^wah-TUodBlfE$" 		// WhatsApp - Web App
+	
+	open-on-workspace "Chat"
+	open-maximized false
+
+	default-column-width { proportion 0.65; }
+}
+
+window-rule {
+	match title="Spotify"
+	match title="vinyl"
+	match title="music"
+	match title="video"
+	match app-id="^wah-E2ZQDVLp$"		// YouTube - Web App
+
+	open-on-workspace "Media"
+	open-maximized false
+}
+
+window-rule {
+	match app-id="^obsidian$"
+	
+	open-on-workspace "Notes"
+	open-maximized true
+}

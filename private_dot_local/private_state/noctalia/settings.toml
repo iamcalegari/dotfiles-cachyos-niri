@@ -1,0 +1,177 @@
+config_version = 14
+
+[bar.default]
+center = [ "workspaces" ]
+end = [ "media", "tray", "volume", "brightness", "battery", "notifications", "clock", "control-center" ]
+margin_edge = 6
+margin_ends = 6
+position = "top"
+start = [ "launcher", "cpu", "temp", "ram", "active_window" ]
+
+[brightness]
+enable_ddcutil = true
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[dock]
+background_opacity = 0.34999999217689037
+enabled = true
+icon_size = 42
+monitors = [ "HDMI-A-1", "eDP-1" ]
+pinned = [
+    "Alacritty",
+    "org.gnome.Nautilus",
+    "md.obsidian.Obsidian",
+    "firefox",
+    "code",
+    "MongoDB Compass",
+    "postman",
+    "org.mozilla.firefox.firefox-wah-TUodBlfE",
+    "com.discordapp.Discord",
+    "org.mozilla.firefox.firefox-wah-E2ZQDVLp",
+    "com.spotify.Client",
+    "page.codeberg.M23Snezhok.Vinyl"
+]
+position = "bottom"
+show_dots = true
+
+[hooks]
+started = [ "/home/alan/.local/bin/dotsync" ]
+theme_mode_changed = [ "/home/alan/.local/bin/dotsync" ]
+
+[location]
+address = "Belo Horizonte"
+
+[lockscreen]
+blur_intensity = 0.65000000000000002
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[osd]
+position = "bottom_right"
+
+[shell]
+avatar_path = "/home/alan/Pictures/avatar/face.jpg"
+font_family = "Adwaita Sans"
+polkit_agent = true
+time_format = "{:%I:%M %p}"
+
+    [shell.launcher]
+    pinned = [
+        "discord",
+        "firefox",
+        "Alacritty",
+        "audacity",
+        "org.gnome.Nautilus",
+        "com.obsproject.Studio",
+        "code",
+        "io.github.kolunmi.Bazaar",
+        "org.mozilla.firefox.firefox-wah-TUodBlfE",
+        "page.codeberg.M23Snezhok.Vinyl",
+        "org.musicbrainz.Picard",
+        "com.spotify.Client",
+        "mongodb-compass",
+        "org.mozilla.firefox.firefox-wah-E2ZQDVLp",
+        "md.obsidian.Obsidian",
+        "com.getpostman.Postman",
+        "postman",
+        "org.nicotine_plus.Nicotine"
+    ]
+
+    [shell.panel]
+    transparency_mode = "glass"
+
+[theme]
+builtin = "Tokyo-Night"
+mode = "auto"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [
+        "alacritty",
+        "btop",
+        "cava",
+        "emacs",
+        "foot",
+        "ghostty",
+        "gtk3",
+        "gtk4",
+        "helix",
+        "hyprland",
+        "kcolorscheme",
+        "kitty",
+        "labwc",
+        "mango",
+        "niri",
+        "qt",
+        "scroll",
+        "starship",
+        "sway",
+        "wezterm"
+    ]
+
+[wallpaper]
+directory = "/home/alan/Pictures/Wallpapers"
+fill_color = "#000000"
+fill_mode = "crop"
+transition = [ "fade", "wipe", "disc", "stripes", "honeycomb" ]
+transition_duration = 3000.0
+
+    [wallpaper.automation]
+    enabled = true
+    interval_seconds = 300
+    order = "random"
+
+    [wallpaper.default]
+    path = "/home/alan/Pictures/Wallpapers/dan-meyers-ucmEHogvn1g-unsplash.jpg"
+
+    [wallpaper.last]
+    path = "/home/alan/Pictures/Wallpapers/dan-meyers-ucmEHogvn1g-unsplash.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/alan/Pictures/Wallpapers/dan-meyers-ucmEHogvn1g-unsplash.jpg"

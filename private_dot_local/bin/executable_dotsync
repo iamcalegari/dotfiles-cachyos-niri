@@ -13,7 +13,7 @@ echo "📁 Exportando arquivos essenciais para o Chezmoi..."
 # 3. Adicionar arquivos essenciais ao Chezmoi
 # 3.1 .config/
 echo "➕️ Adicionando arquivos de configuração ao Chezmoi..."
-chezmoi add -a ~/.config/niri/ \
+chezmoi add ~/.config/niri/ \
             ~/.config/alacritty/ \
             ~/.config/fish/ \
             ~/.config/mongodb-compass.conf \
@@ -28,8 +28,9 @@ chezmoi add ~/.local/bin/ \
             ~/.local/share/applications/ \
             ~/.local/share/color-schemes/ \
             ~/.local/share/vicinae/ \
-            ~/.local/share/wallpapers/ 
-            # ~/.local/share/fonts/ 
+            ~/.local/share/wallpapers/ \
+            ~/.local/state/noctalia/settings.toml
+            # ~/.local/share/fonts/
 
 
 # 3.3 .ssh/
@@ -69,7 +70,7 @@ echo "🆕 Adicionando alterações ao commit..."
 git add .
 
 echo "💬 Fazendo commit: 'Sync: (date +'%Y-%m-%d %H:%M')'..."
-git commit -m "Sync: (date +'%Y-%m-%d %H:%M')"
+git commit -m "Sync: "(date +'%Y-%m-%d %H:%M')
 
 echo "📤 Fazendo push..."
 git push origin main
