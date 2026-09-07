@@ -1,1 +1,3 @@
 .local/bin/cloudflared
+.local/bin/uv
+.local/bin/uvx
