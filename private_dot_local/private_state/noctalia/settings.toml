@@ -18,6 +18,7 @@ end = [
     "battery",
     "notifications",
     "clock",
+    "theme_mode",
     "control-center"
 ]
 hover_highlight = true
@@ -199,7 +200,8 @@ time_format = "{:%I:%M %p}"
 
 [theme]
 builtin = "Tokyo-Night"
-shell_mode = "light"
+mode = "light"
+shell_mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
 
@@ -242,16 +244,42 @@ transition_on_startup = true
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-0pedge.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-ex22jo.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-0pedge.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-ex22jo.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-0pedge.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-ex22jo.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-0pedge.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-ex22jo.jpg"
+
+    [[wallpaper.favorite]]
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-eyqvyr.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-g81oyd.jpg"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-content"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-4ypjpg.jpg"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-content"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-kwg1wm.jpg"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-content"
+
+[widget.active_window]
+capsule_radius = "auto"
+title_scroll = "on_hover"
 
 [widget.control-center]
 capsule = true

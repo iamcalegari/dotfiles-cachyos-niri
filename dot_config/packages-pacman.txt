@@ -165,6 +165,7 @@ nvidia-prime
 nvidia-settings
 nvidia-utils
 obs-studio
+openai-codex
 opencl-nvidia
 opencv
 openssh
