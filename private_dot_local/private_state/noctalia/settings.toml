@@ -18,7 +18,6 @@ end = [
     "battery",
     "notifications",
     "clock",
-    "theme_mode",
     "control-center"
 ]
 hover_highlight = true
@@ -89,12 +88,14 @@ theme_mode_changed = [ "/home/alan/.local/bin/dotsync" ]
 
 [location]
 address = "Belo Horizonte"
+auto_locate = true
 
 [lockscreen]
 blur_intensity = 0.65000000000000002
+blurred_desktop = true
 
 [lockscreen_widgets]
-enabled = false
+enabled = true
 schema_version = 2
 widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
 
@@ -157,7 +158,11 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
         show_unlock_hint = true
         show_weather = true
 
+[notification]
+background_opacity = 0.74999998323619366
+
 [osd]
+background_opacity = 0.74999998323619366
 position = "bottom_right"
 
 [plugins]
@@ -167,6 +172,7 @@ enabled = [ "noctalia/notes", "noctalia/screen_recorder" ]
 app_icon_color = "secondary"
 avatar_path = "/home/alan/Pictures/avatar/face.jpg"
 font_family = "Adwaita Sans"
+password_style = "random"
 polkit_agent = true
 screen_time_enabled = true
 time_format = "{:%I:%M %p}"
@@ -192,6 +198,19 @@ time_format = "{:%I:%M %p}"
         "postman",
         "org.nicotine_plus.Nicotine"
     ]
+    show_app_actions = true
+
+        [shell.launcher.providers.emoji]
+        global = true
+
+        [shell.launcher.providers.session]
+        global = false
+
+        [shell.launcher.providers.wallpaper]
+        global = true
+
+        [shell.launcher.providers.windows]
+        global = true
 
     [shell.panel]
     control_center_placement = "floating"
@@ -244,16 +263,16 @@ transition_on_startup = true
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-ex22jo.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-4l1q1r.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-43lqvy.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-4l1q1r.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-43lqvy.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-1p13z1.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-ex22jo.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-4l1q1r.jpg"
 
     [[wallpaper.favorite]]
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-eyqvyr.jpg"
@@ -274,6 +293,12 @@ transition_on_startup = true
     [[wallpaper.favorite]]
     palette_source = "wallpaper"
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-kwg1wm.jpg"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-content"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-9d56mk.jpg"
     theme_mode = "dark"
     wallpaper_scheme = "m3-content"
 
