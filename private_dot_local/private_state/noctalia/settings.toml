@@ -200,7 +200,7 @@ time_format = "{:%I:%M %p}"
 
 [theme]
 builtin = "Tokyo-Night"
-mode = "light"
+mode = "dark"
 shell_mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
