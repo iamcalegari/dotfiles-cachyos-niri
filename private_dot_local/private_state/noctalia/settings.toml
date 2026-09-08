@@ -58,8 +58,11 @@ widget_order = []
 background_opacity = 0.20000000000000001
 border = "#ffffff2b"
 border_width = 1.0
+cross_axis_padding = 4
 enabled = true
-icon_size = 42
+icon_size = 32
+item_spacing = 2
+main_axis_padding = 8
 monitors = [ "HDMI-A-1", "eDP-1" ]
 pinned = [
     "Alacritty",
@@ -67,7 +70,6 @@ pinned = [
     "md.obsidian.Obsidian",
     "firefox",
     "code",
-    "MongoDB Compass",
     "postman",
     "org.mozilla.firefox.firefox-wah-TUodBlfE",
     "com.discordapp.Discord",
@@ -197,7 +199,7 @@ time_format = "{:%I:%M %p}"
 
 [theme]
 builtin = "Tokyo-Night"
-mode = "auto"
+shell_mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
 
@@ -240,16 +242,16 @@ transition_on_startup = true
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-yje56l.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-0pedge.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-yje56l.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-0pedge.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-yje56l.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-0pedge.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-yje56l.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-0pedge.jpg"
 
 [widget.control-center]
 capsule = true
