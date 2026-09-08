@@ -203,7 +203,7 @@ wallpaper_scheme = "m3-content"
 directory = "/home/alan/Pictures/Wallpapers"
 fill_color = "#000000"
 fill_mode = "crop"
-transition = [ "fade", "wipe", "disc", "stripes", "honeycomb" ]
+transition = [ "disc", "fade", "honeycomb", "stripes", "wipe", "zoom" ]
 transition_duration = 3000.0
 transition_on_startup = true
 
@@ -213,13 +213,13 @@ transition_on_startup = true
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/anna-wangler-_GqwoiT7QY8-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-0jkg3q.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/anna-wangler-_GqwoiT7QY8-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-0jkg3q.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/anna-wangler-_GqwoiT7QY8-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-0jkg3q.jpg"
 
 [widget.control-center]
 capsule = true
