@@ -213,13 +213,13 @@ transition_on_startup = true
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-0jkg3q.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-45qqd1.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-0jkg3q.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-45qqd1.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-0jkg3q.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-45qqd1.jpg"
 
 [widget.control-center]
 capsule = true
