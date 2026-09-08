@@ -213,13 +213,13 @@ transition_on_startup = true
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/dan-meyers-ucmEHogvn1g-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/anna-wangler-_GqwoiT7QY8-unsplash.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/dan-meyers-ucmEHogvn1g-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/anna-wangler-_GqwoiT7QY8-unsplash.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/dan-meyers-ucmEHogvn1g-unsplash.jpg"
+    path = "/home/alan/Pictures/Wallpapers/anna-wangler-_GqwoiT7QY8-unsplash.jpg"
 
 [widget.control-center]
 capsule = true
