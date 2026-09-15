@@ -224,7 +224,7 @@ time_format = "{:%I:%M %p}"
 
 [theme]
 builtin = "Tokyo-Night"
-mode = "auto"
+mode = "dark"
 shell_mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
@@ -268,16 +268,16 @@ transition_on_startup = true
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-q6v1wd.jpg"
+    path = "/home/alan/Pictures/Wallpapers/Old/cassie-boca-gFyy2Po7T-k-unsplash.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-q6v1wd.jpg"
+    path = "/home/alan/Pictures/Wallpapers/Old/cassie-boca-gFyy2Po7T-k-unsplash.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-01eve3.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-q6v1wd.jpg"
+    path = "/home/alan/Pictures/Wallpapers/Old/cassie-boca-gFyy2Po7T-k-unsplash.jpg"
 
     [[wallpaper.favorite]]
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-eyqvyr.jpg"
@@ -342,6 +342,12 @@ transition_on_startup = true
     [[wallpaper.favorite]]
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-nrvr7j.jpg"
     theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-432r39.jpg"
+    theme_mode = "auto"
+    wallpaper_scheme = "m3-content"
 
 [widget.active_window]
 capsule_radius = "auto"
