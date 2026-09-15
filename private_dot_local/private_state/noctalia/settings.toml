@@ -27,7 +27,7 @@ margin_ends = 6
 position = "top"
 radius = 14
 shadow = true
-start = [ "launcher", "cpu", "temp", "ram", "active_window" ]
+start = [ "launcher", "cpu", "temp", "ram", "disk_root", "disk_home", "active_window" ]
 
 [battery.device."/org/freedesktop/UPower/devices/phone_dev_3C_1E_B5_15_96_98"]
 warning_threshold = 10
@@ -77,6 +77,7 @@ pinned = [
     "com.discordapp.Discord",
     "org.mozilla.firefox.firefox-wah-E2ZQDVLp",
     "com.spotify.Client",
+    "waxtrail",
     "page.codeberg.M23Snezhok.Vinyl"
 ]
 position = "bottom"
@@ -223,7 +224,7 @@ time_format = "{:%I:%M %p}"
 
 [theme]
 builtin = "Tokyo-Night"
-mode = "dark"
+mode = "auto"
 shell_mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
@@ -267,16 +268,16 @@ transition_on_startup = true
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-0qgw5l.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-eyqvyr.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-0qgw5l.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-eyqvyr.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-01eve3.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-0qgw5l.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-eyqvyr.jpg"
 
     [[wallpaper.favorite]]
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-eyqvyr.jpg"
@@ -312,12 +313,28 @@ transition_on_startup = true
     theme_mode = "dark"
     wallpaper_scheme = "m3-content"
 
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-0jrwxy.jpg"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-content"
+
 [widget.active_window]
 capsule_radius = "auto"
 title_scroll = "on_hover"
 
 [widget.control-center]
 capsule = true
+
+[widget.disk_home]
+path = "/home"
+stat = "disk_free"
+type = "sysmon"
+
+[widget.disk_root]
+path = "/"
+stat = "disk_free"
+type = "sysmon"
 
 [widget.network]
 anchor = true

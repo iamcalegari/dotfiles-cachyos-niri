@@ -158,6 +158,7 @@ nfs-utils
 ngrok
 nilfs-utils
 niri-screenshare
+nm-connection-editor
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
