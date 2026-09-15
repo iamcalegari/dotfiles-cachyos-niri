@@ -268,16 +268,16 @@ transition_on_startup = true
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-eyqvyr.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-q6v1wd.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-eyqvyr.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-q6v1wd.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-01eve3.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-eyqvyr.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-q6v1wd.jpg"
 
     [[wallpaper.favorite]]
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-eyqvyr.jpg"
@@ -318,6 +318,30 @@ transition_on_startup = true
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-0jrwxy.jpg"
     theme_mode = "dark"
     wallpaper_scheme = "m3-content"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-vmzjel.jpg"
+    theme_mode = "auto"
+    wallpaper_scheme = "m3-content"
+
+    [[wallpaper.favorite]]
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-4ygd8l.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-yxqd2l.jpg"
+    theme_mode = "auto"
+    wallpaper_scheme = "m3-content"
+
+    [[wallpaper.favorite]]
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-zywkpv.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-nrvr7j.jpg"
+    theme_mode = "auto"
 
 [widget.active_window]
 capsule_radius = "auto"
