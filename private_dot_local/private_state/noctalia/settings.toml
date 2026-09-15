@@ -14,6 +14,7 @@ end = [
     "media",
     "tray",
     "volume",
+    "network",
     "brightness",
     "battery",
     "notifications",
@@ -70,6 +71,7 @@ pinned = [
     "md.obsidian.Obsidian",
     "firefox",
     "code",
+    "codex-desktop",
     "postman",
     "org.mozilla.firefox.firefox-wah-TUodBlfE",
     "com.discordapp.Discord",
@@ -171,10 +173,12 @@ enabled = [ "noctalia/notes", "noctalia/screen_recorder" ]
 [shell]
 app_icon_color = "secondary"
 avatar_path = "/home/alan/Pictures/avatar/face.jpg"
+external_ip_enabled = true
 font_family = "Adwaita Sans"
 password_style = "random"
 polkit_agent = true
 screen_time_enabled = true
+telemetry_enabled = true
 time_format = "{:%I:%M %p}"
 
     [shell.launcher]
@@ -263,16 +267,16 @@ transition_on_startup = true
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-v9pvq3.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-0pedge.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-v9pvq3.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-0pedge.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-01eve3.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-v9pvq3.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-0pedge.jpg"
 
     [[wallpaper.favorite]]
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-eyqvyr.jpg"
@@ -308,6 +312,13 @@ title_scroll = "on_hover"
 
 [widget.control-center]
 capsule = true
+
+[widget.network]
+anchor = true
+show_vpn_label = true
+
+[widget."noctalia/screen_recorder:recorder"]
+enabled = false
 
 [widget.workspaces]
 focused_output_only = true

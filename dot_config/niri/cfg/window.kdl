@@ -76,6 +76,7 @@ window-rule {
 	match title="Code"
 	match title="Compass"
 	match app-id="Postman"
+	match app-id="codex-desktop"
 
 	open-on-workspace "Dev"
 	open-maximized true

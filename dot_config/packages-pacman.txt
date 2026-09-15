@@ -47,6 +47,7 @@ cantarell-fonts
 chezmoi
 chwd
 cliphist
+codex-desktop-git
 cpu-x
 cpupower
 cryptsetup
