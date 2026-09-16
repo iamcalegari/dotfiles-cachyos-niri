@@ -224,7 +224,6 @@ time_format = "{:%I:%M %p}"
 
 [theme]
 builtin = "Tokyo-Night"
-mode = "auto"
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
 
