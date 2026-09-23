@@ -9,6 +9,7 @@ aubio
 audacity
 awesome-terminal-fonts
 aws-cli-v2
+aws-session-manager-plugin
 base
 base-devel
 bash-completion

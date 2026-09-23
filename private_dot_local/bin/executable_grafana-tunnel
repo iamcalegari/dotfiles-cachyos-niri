@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Abre túnel SSM pelo bastion até o Grafana privado (docs/runbooks/CONECTAR-SERVICOS-PRIVADOS.md)
+# Uso: grafana-tunnel [prod|staging] [porta-local]
+#   prod    -> perfil tbr (conta 519321091688), host grafana.prod.tamborine.app
+#   staging -> perfil tbr-staging (conta 439398010190), host grafana.tamborine.app
+set -euo pipefail
+ENV="${1:-prod}"
+PORT="${2:-8080}"
+case "$ENV" in
+  prod)    HOST="grafana.prod.tamborine.app"; export AWS_PROFILE="${AWS_PROFILE_PROD:-tbr}" ;;
+  staging) HOST="grafana.tamborine.app";      export AWS_PROFILE="${AWS_PROFILE_STAGING:-tbr-staging}" ;;
+  *) echo "uso: grafana-tunnel [prod|staging] [porta]" >&2; exit 2 ;;
+esac
+BASTION_HOST=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=bastion-host" "Name=instance-state-name,Values=running" \
+  --query "Reservations[*].Instances[*].InstanceId" --output text)
+[ -n "$BASTION_HOST" ] || { echo "bastion-host não encontrado no perfil $AWS_PROFILE" >&2; exit 1; }
+grep -q "$HOST" /etc/hosts || echo "aviso: falta '127.0.0.1 $HOST' no /etc/hosts" >&2
+echo "[$ENV] perfil=$AWS_PROFILE bastion=$BASTION_HOST -> https://$HOST:$PORT"
+exec aws ssm start-session --target "$BASTION_HOST" \
+  --document-name AWS-StartPortForwardingSessionToRemoteHost \
+  --parameters "{\"host\":[\"$HOST\"],\"portNumber\":[\"443\"],\"localPortNumber\":[\"$PORT\"]}"
