@@ -77,7 +77,6 @@ pinned = [
     "com.discordapp.Discord",
     "org.mozilla.firefox.firefox-wah-E2ZQDVLp",
     "com.spotify.Client",
-    "waxtrail",
     "page.codeberg.M23Snezhok.Vinyl"
 ]
 position = "bottom"
@@ -268,16 +267,16 @@ transition_on_startup = true
     order = "random"
 
     [wallpaper.default]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-nrvr7j.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-432r39.jpg"
 
     [wallpaper.last]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-nrvr7j.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-432r39.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-vg3693.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/space-nrvr7j.jpg"
+    path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/mountains-432r39.jpg"
 
     [[wallpaper.favorite]]
     path = "/home/alan/Pictures/Wallpapers/desert-mountains-space-forest-minimal/desert-eyqvyr.jpg"
